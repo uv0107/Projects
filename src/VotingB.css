@@ -1,0 +1,102 @@
+/* General container spacing */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+  }
+  
+  /* Main Heading */
+  .main-heading {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #e9e5e5;
+    border-bottom: 2px solid #6c757d;
+    padding-bottom: 10px;
+  }
+  
+  /* Category Titles */
+  .category-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #fdeeee;
+    border-left: 4px solid #6c757d;
+    padding-left: 10px;
+  }
+  
+  /* Contestants Grid */
+  .contestants-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+  }
+  
+  /* Card Base Style */
+  .custom-card {
+    width: 260px;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    background: #ffffff;
+    cursor: pointer;
+  }
+  
+  /* President Hover Style */
+  .president-card:hover {
+    background: linear-gradient(135deg, rgba(173, 216, 230, 0.3), rgba(240, 248, 255, 0.5));
+    transform: translateY(-10px);
+    box-shadow: 0 0 18px rgba(173, 216, 230, 0.6);
+  }
+  
+  .president-card:hover .card-title,
+  .president-card:hover .card-text {
+    color: #faf5f5;
+  }
+  
+  /* Vice President Hover Style (same light transparent effect) */
+  .section-vice-president .custom-card:hover {
+    background: linear-gradient(135deg, rgba(176, 224, 230, 0.4), rgba(255, 255, 255, 0.5));
+    transform: translateY(-10px);
+    box-shadow: 0 0 18px rgba(176, 224, 230, 0.5);
+  }
+  
+  .section-vice-president .custom-card:hover .card-title,
+  .section-vice-president .custom-card:hover .card-text {
+    color: #f3efef;
+  }
+  
+  /* Card Image */
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #dcdcdc;
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .custom-card {
+      width: 100%;
+    }
+  }
+  
