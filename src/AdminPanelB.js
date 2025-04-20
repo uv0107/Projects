@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import Web3 from 'web3';
 import './AdminPanelB.css';
-
-const contractAddress = '0xD852940c9E35663bF646Cf767136F31127306454'; // ✅ Your deployed contract address
-
-// Directly include the ABI here
+const contractAddress = '0xD852940c9E35663bF646Cf767136F31127306454'; 
 const contractABI = [
 	{
 		"inputs": [
@@ -227,17 +224,17 @@ export default function AdminPanel() {
       // Check if the user is the admin
       const admin = await contract.methods.admin().call();
       if (accounts[0].toLowerCase() !== admin.toLowerCase()) {
-        setStatus("❌ You are not the admin.");
+        setStatus("You are not the admin.");
         return;
       }
 
       // Add candidate
       await contract.methods.addCandidate(candidateName).send({ from: accounts[0] });
-      setStatus("✅ Candidate added successfully");
+      setStatus("Candidate added successfully");
       setCandidateName('');
     } catch (err) {
       console.error(err);
-      setStatus("❌ Error adding candidate. Please try again.");
+      setStatus("Error adding candidate. Please try again.");
     }
   };
 
@@ -250,16 +247,16 @@ export default function AdminPanel() {
       // Check if the user is the admin
       const admin = await contract.methods.admin().call();
       if (accounts[0].toLowerCase() !== admin.toLowerCase()) {
-        setStatus("❌ You are not the admin.");
+        setStatus("You are not the admin.");
         return;
       }
 
       // Start voting
       await contract.methods.startVoting().send({ from: accounts[0] });
-      setStatus("✅ Voting has started");
+      setStatus("Voting has started");
     } catch (err) {
       console.error(err);
-      setStatus("❌ Error starting voting");
+      setStatus(" Error starting voting");
     }
   };
 
@@ -272,16 +269,16 @@ export default function AdminPanel() {
       // Check if the user is the admin
       const admin = await contract.methods.admin().call();
       if (accounts[0].toLowerCase() !== admin.toLowerCase()) {
-        setStatus("❌ You are not the admin.");
+        setStatus("You are not the admin.");
         return;
       }
 
       // End voting
       await contract.methods.endVoting().send({ from: accounts[0] });
-      setStatus("✅ Voting has ended");
+      setStatus("Voting has ended");
     } catch (err) {
       console.error(err);
-      setStatus("❌ Error ending voting");
+      setStatus("Error ending voting");
     }
   };
 
