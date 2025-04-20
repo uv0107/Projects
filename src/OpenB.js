@@ -6,7 +6,6 @@ import './OpenB.css';
 const OpenB = () => {
   return (
     <div className="home-page">
-      {/* Header */}
       <header className="header">
         <div className="university-title">
           SecureVoting
@@ -18,8 +17,6 @@ const OpenB = () => {
           <Link to="/Results">Results</Link>
         </nav>
       </header>
-
-      {/* Hero Content */}
       <section className="hero-section">
         <h1>Blockchain-Based Secure Voting</h1>
         <p>
