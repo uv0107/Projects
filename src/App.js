@@ -3,8 +3,6 @@ import Results from './Results';
 import Voting from './VotingB';
 import AdminPanel from './AdminPanelB';
 import OpenB from './OpenB';
-// import MetaMask from './MetaMaskConnection';
-// import { Meta } from "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App(){
   return (
