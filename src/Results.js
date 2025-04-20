@@ -1,10 +1,8 @@
-// src/components/Results.js
 import React, { useEffect, useState } from 'react';
 import Web3 from 'web3';
 import './ResultsB.css';
 import contractABI from './VotingSystem.json';
-const contractAddress = '0xD852940c9E35663bF646Cf767136F31127306454'; // Replace with your deployed address
-
+const contractAddress = '0xD852940c9E35663bF646Cf767136F31127306454';
 export default function Results() {
   const [candidates, setCandidates] = useState([]);
   const [account, setAccount] = useState('');
