@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Web3 from 'web3';
 import './AdminPanelB.css';
-const contractAddress = '0xD852940c9E35663bF646Cf767136F31127306454'; 
+const contractAddress = '0xC2531164DDF0732435B13003481cB25efca6A9c9'; 
 const contractABI = [
 	{
 		"inputs": [
